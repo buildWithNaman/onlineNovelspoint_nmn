@@ -1,0 +1,10 @@
+<div class="reader-toolbar">
+  <button (click)="decrease()">A-</button>
+  <button (click)="increase()">A+</button>
+  <label><input type="checkbox" [(ngModel)]="night">Night</label>
+</div>
+
+<article [ngClass]="{'night': night}" [style.fontSize.px]="font">
+  <h1>{{chapter.title}}</h1git >
+  <div [innerHTML]="chapter.content"></div>
+</article>
